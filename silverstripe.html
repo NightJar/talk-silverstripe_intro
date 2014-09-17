@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>SilverStripe - The South West Pacific's best PHP framework</title>
+		<meta name="description" content="Introduction and overview of SilverStripe PHP CMS &amp; framework">
+		<meta name="author" content="Dylan Wagstaff">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+		<!--[if lt IE 9]><script src="lib/js/html5shiv.js"></script><![endif]-->
+		<style>
+			ul.socials li{list-style-type:none}
+			ul.socials img{vertical-align:middle;box-shadow:none;margin-right:0.5em}
+			div.slides img{border:none}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<img src="img/SilverStripe_500_transparent.png" alt="SilverStripe" />
+					<h3>The best PHP framework you've never heard of <small>(probably)</small></h3>
+				</section>
+				<section>
+					<section>
+						<h2>Tena Koutou</h2>
+					</section>
+					<section>
+						<h2>Who is this guy?</h2>
+						<p>A web developer. First met Silverstripe in 2008 (v2.2), haven't really looked back much since.</p>
+						<ul class="socials">
+							<li><a href="http://twitter.com/nightjarnz"><img src="img/Twitter_logo_blue.png" alt="twitter" class="social" />@NightjarNZ</a></li>
+							<li><a href="http://github.com/nightjar"><img src="img/GitHub-Mark-64px.png" alt="github" class="social" />Nightjar</a></li>
+						</ul>
+						<aside class="notes">
+							Yarn about how you came across it. And why you stuck with it (nice easy templating).
+						</aside>
+					</section>
+					<section>
+						<h2>Why SilverStripe?</h2>
+						<ul>
+							<li>It's easy.</li>
+							<li>Which means it makes me look good.</li>
+							<li>Which means it's better than *XYZ.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Trust me.</h2>
+						<img src="img/SHakG.jpg" alt="This is pretty much my job" />
+						<p>This is pretty much my job</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>What is Silverstripe?</h2>
+						<!--img src="img/ssleaves.jpg" alt="Bamboo!" style="float:right;margin-left:0.5em" /-->
+						<ol>
+							<li class="fragment">A subtype of Bambusa multiplex <img src="img/ssStem.jpg" alt="Bamboo!" style="float:right;margin-left:0.5em" /></li>
+							<li class="fragment">Clumping &amp; non invasive</li>
+							<li class="fragment">Great for privacy screens (hedges)</li>
+							<li class="fragment"><strong>A seldom searched term</strong></li>
+						</ol>
+					</section>
+					<section>
+						<h2>What is Silverstripe?</h2>
+						<ol>
+							<li class="fragment">A company</li>
+							<li class="fragment">A great user friendly CMS</li>
+							<li class="fragment">A fantastic framework</li>
+						</ol>
+						<p class="fragment">silverstripe<a href="http://silverstripe.com"><strong>.com</strong></a> &amp; silverstripe<a href="http://silverstripe.org"><strong>.org</strong></a></p>
+					</section>
+					<section>
+						<img src="img/ss3.1.png" alt="Silverstripe CMS v3.1" />
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Company you say?</h2>
+						<ol>
+							<li>Founded in 2000 as Totally Digital</li>
+							<li>Pre all the things</li>
+							<li>Simple product ~2001/2, IE only</li>
+							<li>Grew incrementally until CCK-ish</li>
+							<li>Tried to be commercial product</li>
+							<li>Dec. 2005 - Rewrite time!</li>
+						</ol>
+						<aside class="notes">
+							Before drupal &amp; rails were big, huge config array, limiting. Shops preferred Open Source.
+						</aside>
+					</section>
+					<section>
+						<h2>Giving PHP what it needed</h2>
+						<ul>
+							<li>80% web pages, 20% custom dev</li>
+							<li>Just a CMS not good enough</li>
+							<li>MVC &amp; DB abstraction</li>
+							<li>Influenced by rails; active record</li>
+							<li>Decided to Open Source a month before release</li>
+							<li>v2 April 2007 - June 2012 (v2.4 May 2010 -> EOL March 2015)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Lessons learnt</h2>
+						<ul>
+							<li>3.0 released June 2012</li>
+							<li>Major API overhaul</li>
+							<li>New config system</li>
+							<li>New CMS interface</li>
+							<li>Lightened the core</li>
+							<li>Framework & CMS decoupled properly</li>
+							<li>3.1 October 2013, 3.2 on horizon</li>
+						</ul>
+					</section>
+					<section>
+						<blockquote>
+							One of the other latent goals of the system that really only came into its own in 3.0 was the idea that CMS is really just a way of managing a set of structured data.
+							And that, whatever structure you create at the framework level, should be reflected in the CMS: a responsive UI in the sense of being responsive to the data structure
+						</blockquote>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Why should I use it?</h2>
+						<ul>
+							<li>Nothing beats it on (dev) speed. Get to go in no time.</li>
+							<li>Clean code, easy to extend functionality</li>
+							<li>Fantastic templates</li>
+							<li>Not just for websites, framework only is the biz too</li>
+						</ul>
+						<p class="fragment" style="margin-top:1em"><q>&lt;sminnee&gt; yeah. i mean, you can’t force someone to love you :p</q> - Well I'm here to try anyway.</p>
+					</section>
+					<section>
+						<h2>How do I make it tick?</h2>
+						<ol>
+							<li>Check all the prerequisites</li>
+							<li>Drop files</li>
+							<li>Config file</li>
+							<li>Build, then flush</li>
+							<li>???</li>
+							<li>Profit.</li>
+						</ol>
+					</section>
+					<section>
+						<h2>Stuff you need</h2>
+						<ul>
+							<li>A web server with rewrite capabilities</li>
+							<li>PHP (duh. Currently 5.3.3+), with required modules</li>
+							<li>A large-ish memory limit</li>
+							<li>Database server (MySQL by default)</li>
+						</ul>
+						<aside class="notes">
+							Mostly a default PHP install is fine, excepting + gd & mcrypt (which on most linux distros I've seen have been install separately)
+						</aside>
+					</section>
+					<section>
+						<h2>Fetch the files</h2>
+						<pre><code>composer create-project silverstripe/installer ssisthewin</code></pre>
+						<p>Release archives on website, or grab release (default) branch from Github</p>
+					</section>
+					<section>
+						<h2>Config</h2>
+						<p>_ss_environment.php</p>
+						<pre><code>
+&lt;?php
+define('SS_ENVIRONMENT_TYPE', 'dev');
+// These three define set the database connection details.
+define('SS_DATABASE_SERVER', 'localhost');
+define('SS_DATABASE_USERNAME', 'root');
+define('SS_DATABASE_PASSWORD', 'password');
+//Name the DB whatever the folder SS is installed into is named
+define('SS_DATABASE_CHOOSE_NAME', 1);
+//login on first run
+define('SS_DEFAULT_ADMIN_USERNAME', 'user@host');
+define('SS_DEFAULT_ADMIN_PASSWORD', 'password');
+//CLI support!
+global $_FILE_TO_URL_MAPPING;
+$_FILE_TO_URL_MAPPING['/var/www'] = 'http://mysweetwebsite';
+						</code></pre>
+						<p>This file can sit outside the install root <br />(so long as it's in an ancestor)</p>
+					</section>
+					<section>
+						<h2>Make the magic happen</h2>
+						<p><code>http://domain.test/dev/build</code></p>
+						<p><code>http://domain.test/?flush=all</code></p>
+						<p style="margin-top:1em">
+							Build the manifest, build the database (where necessary), refresh the config, find & cache new template files
+						</p>
+					</section>
+					<section data-transition="linear" data-background="img/devbuild.png" data-background-transition="slide">
+					</section>
+					<section>
+						<h2>???</h2>
+						<p>Build a theme? Write some code? <em>Create the web.</em></p>
+						<h2>Profit</h2>
+						<p>Whatever it is you do to put pounds in your pocket.</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>The CMS is a pleaser</h2>
+						<ul>
+							<li>It's the easiest I've ever encountered.</li>
+							<li>Assets are stored on the files tab.</li>
+							<li>Media embeds magically with oembed.</li>
+							<li>Pages fit a type, defining the template to use.</li>
+							<li>Easy for users to edit, hard to hash up.</li>
+						</ul>
+						<p>The developer's CMS - a designer's friend</p>
+					</section>
+					<section>
+						<h2>Code's Basic structure</h2>
+						<ul>
+							<li>Everything is a module (including CMS and your site code).</li>
+							<li>Modules are self contained (assets, etc).</li>
+							<li>There's a hierarchy to it all (module, theme, project).</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Ok, lets make something quicksmart</h2>
+						<p>
+							I know a guy who loves a dirty blog as a simple test. So lets do that.
+						</p>
+						<p style="margin-top:1em">
+							The second tutorial sort of covers this. But we can do better.
+						</p>
+					</section>
+					<section>
+						<h2>Blog Page</h2>
+						<p><code>mysite/code/BlogPage.php</code></p>
+						<pre><code>
+&lt;?php
+class BlogPage extends Page {
+	private static $has_many = [
+		'Posts' => 'BlogPost'
+	];
+	public function getCMSFields() {
+		$fields = parent::getCMSFields();
+		$fields->addFieldToTab('Root.Main.Posts', GridField::create('Posts', 'Blog Posts', $this->Posts(), GridFieldConfig_RelationEditor::create()));
+		return $fields;
+	}
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>Guess which letter of MVC this is:</h2>
+						<p><code>mysite/code/BlogPage.php</code></p>
+						<pre><code class="php">
+class BlogPage_Controller extends Page_Controller {
+	private static $allowed_actions = ['read'];
+	public function read() {
+		return ['Post'=>BlogPost::get()->byID($this->request->param('ID'))];
+	}
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>Blog object</h2>
+						<p><code>mysite/code/BlogPost.php</code></p>
+						<pre><code class="php">
+&lt;?php
+class BlogPost extends DataObject {
+	private static $db = [
+		'Title' => 'Varchar(200)',
+		'Body' => 'HTMLText'
+	];
+	private static $has_one = [
+		'Author' => 'Member',
+		'Page' => 'BlogPage'
+	];
+	private static $default_sort = 'Created DESC';
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>Page Template</h2>
+						<p><code>(themes/name | mysite) /templates/Layout/BlogPage.ss</code></p>
+						<pre><code class="html">
+&lt;h1&gt;$Title&lt;/h1&gt;
+&lt;div class="content"&gt;$Content&lt;/div&gt;
+&lt;ul class="posts"&gt;
+	&lt;% loop Posts %&gt;
+		&lt;li class="post"&gt;
+			&lt;h2&gt;&lt;a href="{$Top.Link}read/$ID"&gt;$Title&lt;/a&gt;&lt;/h2&gt;
+			&lt;p&gt;Written by $Author.Name on $Created.Nice&lt;/p&gt;
+			&lt;% if $Created != $LastEdited %&gt;
+				&lt;p&gt;&lt;em&gt;Updated: $LastEdited.Nice&lt;/em&gt;&lt;/p&gt;
+			&lt;% end_if %&gt;
+		&lt;p class="intro"&gt;$Body.FirstParagraph&lt;/p&gt;
+		&lt;/li&gt;
+	&lt;% end_loop %&gt;
+&lt;/ul&gt;
+						</pre></code>
+						<aside class="notes">
+							Explain where .FirstParagraph and .Nice come from, what they do, etc. Perhaps point out api.ss.org.nz?
+						</aside>
+					</section>
+					<section>
+						<h2>Post Template</h2>
+						<p><code>(themes/name | mysite) /templates/Layout/BlogPage_read.ss</code></p>
+						<pre><code class="html">
+&lt;% with Post %&gt;
+	&lt;h1&gt;$Title&lt;/h1&gt;
+	&lt;p&gt;Written by $Author.Name on $Created.Nice&lt;/p&gt;
+	&lt;% if $Created != $LastEdited %&gt;
+		&lt;p&gt;&lt;em&gt;Updated: $LastEdited.Nice&lt;/em&gt;&lt;/p&gt;
+	&lt;% end_if %&gt;
+	&lt;div class="content"&gt;$Body&lt;/div&gt;
+&lt;% end_with %&gt;
+						</pre></code>
+					</section>
+					<section data-transition="linear" data-background="img/buildingblog.png" data-background-transition="slide">
+					</section>
+					<section>
+						<h2>What about BlogPage?</h2>
+						<p>Tables sort-of mimic inheritance via joins</p>
+						<img src="img/tutorial2_data-collation.jpg" alt="visual example of table joining for subclass info" />
+					</section>
+					<section data-transition="linear" data-background="img/hammedit.png" data-background-transition="slide">
+					</section>
+					<section>
+						<h2>Fix it fix it fix it</h2>
+						<pre><code class="php">$fields->addFieldToTab('Root.Main.Posts', #...</code></pre>
+						<img src="img/tab-paths-customtab.png" alt="Demonstrating tab referencing" />
+						<p>The docs tell me to remove '.Main'</p>
+						<pre><code class="php">$fields->addFieldToTab('Root.Posts', #...</code></pre>
+					</section>
+					<section data-transition="linear" data-background="img/Post.png" data-background-transition="slide">
+					</section>
+					<section data-transition="linear" data-background="img/savepost.png" data-background-transition="slide">
+					</section>
+					<section data-transition="linear" data-background="img/unflushed.png" data-background-transition="slide">
+					</section>
+					<section>
+						<h2>Where are my posts!?</h2>
+						<p>We didn't flush the template cache yet...</p>
+						<p><code>http://localhost/ssisthewin/blog/?flush=1</code></p>
+						<img src="img/flush.jpg" alt="don't forget to ?flush=1!" />
+					</section>
+					<section data-transition="linear" data-background="img/blog.png" data-background-transition="slide">
+					</section>
+					<section data-transition="linear" data-background="img/readpost.png" data-background-transition="slide">
+					</section>
+					<section data-transition="linear" data-background="img/blogcms.png" data-background-transition="slide">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Ok cool, it makes websites easy. What about proper development?</h2>
+						<p>Developers wanna see the fun bits!</p>
+					</section>
+					<section>
+						<h2>Magic includes</h2>
+						<p>Has it's own inbuilt autoloader</p>
+					</section>
+					<section>
+						<h2>Automagic caching</h2>
+						<p>Advanced options for partial content caching</p>
+					</section>
+					<section>
+						<h2>ORM of champions</h2>
+						<p>Nothing quite like immutable null object pattern</p>
+					</section>
+					<section>
+						<h2>Easy routing</h2>
+						<p>Parametrise the URL</p>
+					</section>
+					<section>
+						<h2>Form Fields</h2>
+						<p>Encapsulation ftw</p>
+					</section>
+					<section>
+						<h2>YAML configuration files</h2>
+						<p>Declarative, kinda like JS plugins</p>
+					</section>
+					<section>
+						<h2>Extensible without hacking</h2>
+						<p>Can use <code>Extension</code> kinda like Laravel events</p>
+					</section>
+					<section>
+						<h2>Dependency injection</h2>
+						<p>::create all the things!</p>
+					</section>
+					<section>
+						<h2>Permissions</h2>
+						<p>can*()</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>OK, maybe I'll show you these briefly too</h2>
+						<p>This is getting down the rabbit hole a bit</p>
+					</section>
+					<section>
+						<h2>Lets...</h2>
+						<ol>
+							<li>Make blog a module</li>
+							<li>Add commenting support</li>
+							<li>... but without touching the module.</li>
+						</ol>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Modules</h2>
+						<p>The <code>$project</code> folder is already a module...</p>
+					</section>
+					<section>
+						<h2>From this</h2>
+						<img src="img/premod.png" alt="Pre module file structure" />
+					</section>
+					<section>
+						<h2>To this</h2>
+						<img src="img/postmod.png" alt="Post module file structure" />
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Extension &amp; <br />DataExtension</h2>
+						<p>An underlay applied to a class to provide extra functionality or extend existing ones (appropriate hooks <pre><code class="php">$this->extend('funcName');</code></pre> required).</p>
+					</section>
+					<section>
+						<h2>First Make the comment model</h2>
+						<pre><code class="php">
+&lt;?php
+class Comment extends DataObject {
+	private static $db = [
+		'Name' => 'Varchar',
+		'Email' => 'Varchar(100)',
+		'Comment' => 'Text'
+	];
+	private static $has_one = [
+		'Post' => 'BlogPost',
+		'Parent' => 'Comment'
+	];
+	private static $has_many = [
+		'Replies' => 'Comment'
+	];
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>'Dynamically' add method to BlogPost</h2>
+						<pre><code class="php">
+&lt;?php
+class Comments extends DataExtension {
+	public function getComments() {
+		return Comment::get()->filter([
+			'ParentID' => 0,
+			'PostID' => $this->owner->ID
+		]);
+	}
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>Add things to the controller</h2>
+						<pre><code class="php">
+&lt;?php
+class LeaveAComment extends Extension {
+	private static $allowed_actions = [
+		'Form'
+	];
+	public function Form() {
+		return Form::create(
+			$this->owner,
+			__FUNCTION__,
+			FieldList::create(
+				TextField::create('Name'),
+				EmailField::create('Email'),
+				TextareaField::create('Comment'),
+				HiddenField::create('PostID', null, $this->owner->getRequest()->param('ID')),
+				HiddenField::create('ParentID')
+			),
+			FieldList::create(
+				FormAction::create('doSubmit', 'Comment')
+			),
+			RequiredFields::create('Name', 'Email', 'Comment')
+		);
+	}
+	public function doSubmit($data, $form) {
+		$comment = Comment::create();
+		$form->saveInto($comment);
+		$comment->PostID = $this->owner->ID;
+		$comment->write();
+		$this->owner->redirectBack();
+	}
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>and modify the templates...</h2>
+						<h2>and edit the config</h2>
+						<p>Gonna to to code for this part :)</p>
+						<aside class="notes">
+							<p>talk folder, example code/mysite/templates. Explain folder structure (root, Layout &amp; Includes), it's only one of the few things that defines a structure.</p>
+							<p>Explain what you've changed, and why, and how it gets used in preference over the 'core' version. Then explain the include business.</p>
+						</aside>
+					</section>
+					<section data-transition="linear" data-background="img/validation.png" data-background-transition="slide">
+					</section>
+					<section data-transition="linear" data-background="img/comments.png" data-background-transition="slide">
+					</section>
+				</section>
+				<section>
+					<h2>Want to know more?</h2>
+					<p>Of course you do.</p>
+				</section>
+				<section>
+					<h2>Silverstripe Europe Conf</h2>
+					<p>PanEuropean meetup <a href="http://silverstripe-europe.org">silverstripe-europe.org</a></p>
+					<p>3rd &amp; 4th Oct 2014 in Linz, Austria. <br />Free! Register at <a href="http://www.meetup.com/SilverStripe-Europe-Meetup/events/168730312/">Meetup.com</a></p>
+					<p>CEO of SilverStripe will be attending, and there are intro workshops scheduled too.</p>
+				</section>
+				<section>
+					<h2>(Semi-)Helpful Links</h2>
+					<ul>
+						<li><a href="http://silverstripe.org">Get it</a></li>
+						<li><a href="http://addons.silverstripe.org">Get extra bits</a></li>
+						<li><a href="https://doc.silverstripe.org">Learn it</a></li>
+						<li><a href="http://api.silverstripe.org">Learn it better</a></li>
+						<li><a href="http://irc.silverstripe.org">Get help (possibly)</a></li>
+						<li><a href="http://github.com/silverstripe">Get the bleeding edge</a></li>
+						<li><a href="http://silverstripe.org/blog">Get news &amp; opinions on it</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				theme: Reveal.getQueryHash().theme,
+				transition: Reveal.getQueryHash().transition || 'default',
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+	</body>
+</html>
